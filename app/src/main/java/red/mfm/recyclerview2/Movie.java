@@ -1,38 +1,51 @@
 package red.mfm.recyclerview2;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Movie {
-  private String title, genre, year;
+  @SerializedName("song")
+  @Expose
+  private String song;
+  @SerializedName("url")
+  @Expose
+  private String url;
+  @SerializedName("artists")
+  @Expose
+  private String artists;
+  @SerializedName("cover_image")
+  @Expose
+  private String coverImage;
 
-  public Movie() {
+  public String getSong() {
+    return song;
   }
 
-  public Movie(String title, String genre, String year) {
-    this.title = title;
-    this.genre = genre;
-    this.year = year;
+  public void setSong(String song) {
+    this.song = song;
   }
 
-  public String getTitle() {
-    return title;
+  public String getUrl() {
+    return url;
   }
 
-  public void setTitle(String name) {
-    this.title = name;
+  public void setUrl(String url) {
+    this.url = url;
   }
 
-  public String getYear() {
-    return year;
+  public String getArtists() {
+    return artists;
   }
 
-  public void setYear(String year) {
-    this.year = year;
+  public void setArtists(String artists) {
+    this.artists = artists;
   }
 
-  public String getGenre() {
-    return genre;
+  public String getCoverImage() {
+    return coverImage;
   }
 
-  public void setGenre(String genre) {
-    this.genre = genre;
+  public void setCoverImage(String coverImage) {
+    this.coverImage = coverImage;
   }
 }

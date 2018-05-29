@@ -39,9 +39,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
   @Override
   public void onBindViewHolder(MyViewHolder holder, int position) {
     Movie movie = moviesList.get(position);
-    holder.title.setText(movie.getTitle());
-    holder.genre.setText(movie.getGenre());
-    holder.year.setText(movie.getYear());
+    holder.title.setText(movie.getSong());
+    holder.genre.setText(movie.getArtists());
+    holder.year.setText(movie.getUrl());
   }
 
   @Override
